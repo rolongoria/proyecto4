@@ -1,0 +1,16 @@
+.footer-container{
+    background-color: rgb(255,244,190);
+    min-height: 15%;
+}
+
+.social-media-icons{
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+}

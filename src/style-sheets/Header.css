@@ -1,0 +1,44 @@
+/* .header-row{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+} */
+
+.header-container {
+    background-color: rgb(255,244,190);
+    min-height: 15%;
+}
+
+
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: Lato,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+.nav-link{
+    color: black;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: grey;
+}
+
+.navbar {
+    padding: 0;
+  }
+
+
