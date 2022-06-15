@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { collection, doc, setDoc, addDoc, onSnapshot, deleteDoc, getDoc } from "firebase/firestore";
+import { collection, doc, setDoc, onSnapshot, deleteDoc, getDoc } from "firebase/firestore";
 import { db } from '../firebase.js';
-import env from 'react-dotenv';
-
-
 
 let editId = '';
 let editName = '';
@@ -15,9 +12,6 @@ let editTime = '';
 const ReservationsAdmin = () => {
 
   const [reservations, setReservations] = useState([]);
-
-
-  
 
   const getData = () => {
     const reservationsArr = [];
@@ -40,7 +34,6 @@ const ReservationsAdmin = () => {
 
   useEffect(() => {
     getData()
-    // console.log(env)
   }, []);
 
 

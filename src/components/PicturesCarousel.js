@@ -1,5 +1,4 @@
 // Carousel to display 4 Pictures
-import { Routes, Route, Link } from "react-router-dom";
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import '../style-sheets/PicturesCarousel.css';
@@ -39,7 +38,7 @@ const PicturesCarousel = (props) => {
             <img
               className="d-block w-100"
               src={props.pic4}
-              alt="Third slide"
+              alt="Fourth slide"
             />    
           </Carousel.Item>
 
