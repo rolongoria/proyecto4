@@ -82,13 +82,6 @@ const ReservationsAdmin = () => {
   const updateElement = async (id) => {
     await setDoc(doc(db, 'reservations', id), form);
 
-      // editId = "";
-      // editName = "";
-      // editPhone = "";
-      // editEmail = "";
-      // editDate = "";
-      // editTime = "";
-
     getData();
   }
 
@@ -98,9 +91,21 @@ const ReservationsAdmin = () => {
   return (
     <div className='container reservation-container'>
       <div className='row'>
+        <div className='col-sm center-text'>
+          <h1>Upcoming Reservations</h1>
+        </div>
+      </div>
+
+      <div className='row'>
+        <div className='col-sm center-text'>
+          <p>This page is intended to be password protected!!</p>
+        </div>
+      </div>
+
+
+      <div className='row'>
         <div className='col-sm-1'></div>
         <div className='col-sm-10'>
-          <h2>Reservations</h2>
           <div className="table-responsive">
             <table className="table table-striped">
               <thead>

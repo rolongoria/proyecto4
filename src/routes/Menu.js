@@ -11,6 +11,12 @@ const Menu = () => {
         <div className='container'>
 
           <div className='row'>
+            <div className='col-sm center-text'>
+              <h1>Our Menu</h1>
+            </div>
+          </div>
+
+          <div className='row'>
             <div className='col-sm-2'></div>
             <div className='col-sm-8 center-text'>
               <img src={Menu1}></img>        

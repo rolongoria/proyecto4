@@ -4,6 +4,12 @@ const About = () => {
   return (
     <div>
         <div className='row'>
+          <div className='col-sm center-text'>
+            <h1>Our Story</h1>
+          </div>
+        </div>
+
+        <div className='row'>
             <div className='col-sm-3'></div>
             <div className='col-sm-6 center-text'>
               <p>Nuestra historia y nuestra famosa receta tienen su origen alrededor del año de 1985.

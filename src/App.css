@@ -4,3 +4,11 @@
   box-sizing: border-box;
   /* background-color: rgb(255,244,190); */
 }
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+}
+
+h2, p {
+  font-family: 'Roboto', sans-serif;
+}

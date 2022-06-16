@@ -65,7 +65,7 @@ const ReserveForm = () => {
             </div>
          
             
-            <button type="submit" className="btn btn-primary" onClick={() => handleClick()}>Make a reservation</button>
+            <button type="submit" className="btn btn-primary" onClick={() => handleClick()}>Book a table</button>
 
 
           
