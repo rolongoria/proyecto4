@@ -26,9 +26,10 @@ const Header = () => {
                   
                   <Link className="nav-link" to="/">HOME</Link>
                   <Link className="nav-link" to="/menu">MENU</Link>
-                  <Link className="nav-link" to="/about">ABOUT US</Link>
+                  <Link className="nav-link" to="/about">OUR STORY</Link>
+                  <Link className="nav-link" to="/contact">CONTACT</Link>
+                  <Link className="nav-link" to="/locations">LOCATIONS</Link>
                   <Link className="nav-link" to="/reservation">RESERVATIONS</Link>
-                  {/* <Link className="nav-link" to="/pictures">PICTURES</Link> */}
                   <Link className="nav-link" to="/reservationsadmin">ADMIN</Link>
               </Nav>
             </Container>

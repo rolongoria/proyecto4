@@ -46,6 +46,12 @@ const About = () => {
             <div className='col-sm-3'></div>
           </div>
 
+          <div className='row'>
+          <div className='col-sm center-text'>
+            <h1>Contact Us</h1>
+          </div>
+        </div>
+
           
     </div>
   )

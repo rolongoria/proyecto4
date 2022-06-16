@@ -8,8 +8,10 @@ import App from './App';
 import Home from './routes/Home';
 import Menu from './routes/Menu';
 import About from './routes/About';
+import Locations from './routes/Locations';
 import Reservations from './routes/Reservations';
 import ReservationsAdmin from './routes/ReservationsAdmin';
+import Contact from './routes/Contact';
 import NoPage from './routes/NoPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +25,8 @@ root.render(
         <Route index element={<Home />} />
         <Route path="menu" element={<Menu />} />
         <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact/>} />
+        <Route path="locations" element={<Locations/>} />
         <Route path="reservation" element={<Reservations />} />
         <Route path="reservationsadmin" element={<ReservationsAdmin />} />
         <Route path="*" element={<NoPage />} />
