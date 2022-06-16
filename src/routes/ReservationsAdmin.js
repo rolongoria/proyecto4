@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { collection, doc, setDoc, onSnapshot, deleteDoc, getDoc } from "firebase/firestore";
 import { db } from '../firebase.js';
+import { AiFillDelete } from "react-icons/ai";
+import { AiFillEdit } from "react-icons/ai";
+import '../style-sheets/ReservationsAdmin.css';
 
 let editId = '';
 let editName = '';
@@ -108,6 +111,7 @@ const ReservationsAdmin = () => {
                   <th>email</th>
                   <th>Date</th>
                   <th>Time</th>
+                  <th colspan = "2">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -123,11 +127,17 @@ const ReservationsAdmin = () => {
                         <td>{reservation.email}</td>
                         <td>{reservation.date}</td>
                         <td>{reservation.time}</td>
-                        <td>
+                        {/* <td>
                           <button type="button" className="btn btn-warning m-1" onClick={() => getElement(reservation.id)}>Edit</button>
                         </td>
                         <td>
                           <button type="button" className="btn btn-danger m-1" onClick={() => deleteElement(reservation.id)}>Delete</button>
+                        </td> */}
+                        <td>
+                          <AiFillEdit className="action-icon" onClick={() => getElement(reservation.id)}/>
+                        </td>
+                        <td>
+                          <AiFillDelete className="action-icon" onClick={() => deleteElement(reservation.id)}/>
                         </td>
                       </tr>
                     

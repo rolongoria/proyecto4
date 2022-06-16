@@ -14,7 +14,7 @@ const PicturesCarousel = (props) => {
             <img
               className="d-block w-100"
               src={props.pic1}
-              alt="First slide"
+              alt="First slide of carousel"
             />
           </Carousel.Item>
 
@@ -22,7 +22,7 @@ const PicturesCarousel = (props) => {
             <img
               className="d-block w-100"
               src={props.pic2}
-              alt="Second slide"
+              alt="Second slide of carousel"
             />
           </Carousel.Item>
 
@@ -30,7 +30,7 @@ const PicturesCarousel = (props) => {
             <img
               className="d-block w-100"
               src={props.pic3}
-              alt="Third slide"
+              alt="Third slide of carousel"
             />
           </Carousel.Item>
 
@@ -38,7 +38,7 @@ const PicturesCarousel = (props) => {
             <img
               className="d-block w-100"
               src={props.pic4}
-              alt="Fourth slide"
+              alt="Fourth slide of carousel"
             />    
           </Carousel.Item>
 
