@@ -116,28 +116,22 @@ const ReservationsAdmin = () => {
                   <th>email</th>
                   <th>Date</th>
                   <th>Time</th>
-                  <th colspan = "2">Actions</th>
+                  <th colSpan = "2">Actions</th>
                 </tr>
               </thead>
               <tbody>
             {
             
-              reservations.map(reservation => {
+              reservations.map((reservation, i) => {
                 return(
                   <>
-                      <tr>
+                      <tr key={i}>
                         <td>{reservation.id}</td>
                         <td>{reservation.name}</td>
                         <td>{reservation.phone}</td>
                         <td>{reservation.email}</td>
                         <td>{reservation.date}</td>
                         <td>{reservation.time}</td>
-                        {/* <td>
-                          <button type="button" className="btn btn-warning m-1" onClick={() => getElement(reservation.id)}>Edit</button>
-                        </td>
-                        <td>
-                          <button type="button" className="btn btn-danger m-1" onClick={() => deleteElement(reservation.id)}>Delete</button>
-                        </td> */}
                         <td>
                           <AiFillEdit className="action-icon" onClick={() => getElement(reservation.id)}/>
                         </td>
