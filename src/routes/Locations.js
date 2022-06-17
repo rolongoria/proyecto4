@@ -26,7 +26,7 @@ const Locations = () => {
                 <div className="gmap_canvas">
                     <iframe width="400" height="300" id="gmap_canvas" 
                         src={addressPharr}
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
                     </iframe>
                 </div>
                 <div className='mt-3 address'>
@@ -48,7 +48,7 @@ const Locations = () => {
                 <div className="gmap_canvas">
                     <iframe width="400" height="300" id="gmap_canvas" 
                         src={addressReynosa}
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
                     </iframe>
                 </div>
                 <div className='mt-3 address'>
