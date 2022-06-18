@@ -14,6 +14,8 @@ window.env = {
   "DokanLibrary1_LibraryPath_x86": "C:\\Program Files\\Dokan\\Dokan Library-1.4.1\\x86\\lib\\",
   "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
   "EDITOR": "notepad.exe",
+  "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+  "FPS_BROWSER_USER_PROFILE_STRING": "Default",
   "HOME": "C:\\Users\\r_zam",
   "HOMEDRIVE": "C:",
   "HOMEPATH": "\\Users\\r_zam",
