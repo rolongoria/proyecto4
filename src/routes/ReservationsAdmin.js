@@ -16,6 +16,8 @@ const ReservationsAdmin = () => {
 
   const [reservations, setReservations] = useState([]);
 
+  const [messages, setMessages] = useState([]);
+
   const getData = () => {
     const reservationsArr = [];
 
@@ -30,13 +32,37 @@ const ReservationsAdmin = () => {
     });
   }
 
+
+  const getMessages = () => {
+    const messagesArr = [];
+
+    onSnapshot(collection(db, 'messages'), (snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        messagesArr.push({...doc.data(), id: doc.id});
+        // console.log(messagesArr);
+        setMessages(messagesArr);
+        // console.log(doc.data());
+        
+      })
+    });
+  }
+
+
+
+
   const deleteElement = async (id) => {
     await deleteDoc(doc(db, 'reservations', id));
     getData();
   };
 
+  const deleteMessage = async (id) => {
+    await deleteDoc(doc(db, 'messages', id));
+    getMessages();
+  };
+
   useEffect(() => {
     getData()
+    getMessages()
   }, []);
 
 
@@ -90,11 +116,6 @@ const ReservationsAdmin = () => {
 
   return (
     <div className='container reservation-container'>
-      <div className='row'>
-        <div className='col-sm center-text'>
-          <h1>Upcoming Reservations</h1>
-        </div>
-      </div>
 
       <div className='row'>
         <div className='col-sm center-text'>
@@ -103,6 +124,13 @@ const ReservationsAdmin = () => {
       </div>
 
 
+      <div className='row'>
+        <div className='col-sm center-text'>
+          <h1>Upcoming Reservations</h1>
+        </div>
+      </div>
+
+      
       <div className='row'>
         <div className='col-sm-1'></div>
         <div className='col-sm-10'>
@@ -139,9 +167,6 @@ const ReservationsAdmin = () => {
                           <AiFillDelete className="action-icon" onClick={() => deleteElement(reservation.id)}/>
                         </td>
                       </tr>
-                    
-
-
                   </>
                 )
               })
@@ -194,6 +219,61 @@ const ReservationsAdmin = () => {
           </div>
 
         </div>
+
+        <div className='row mt-5'>
+        <div className='col-sm center-text'>
+          <h1>Received Messages</h1>
+        </div>
+      </div>
+
+
+
+      <div className='row'>
+        <div className='col-sm-1'></div>
+        <div className='col-sm-10'>
+          <div className="table-responsive">
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>email</th>
+                  <th>Subject</th>
+                  <th>Message</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+            {
+            
+              messages.map((message, i) => {
+                return(
+                  <>
+                      <tr key={i}>
+                        
+                        <td>{message.name}</td>
+                        <td>{message.phone}</td>
+                        <td>{message.email}</td>
+                        <td>{message.subject}</td>
+                        <td>{message.message}</td>
+                        
+                        <td>
+                          <AiFillDelete className="action-icon" onClick={() => deleteMessage(message.id)}/>
+                        </td>
+                      </tr>
+                  </>
+                )
+              })
+            }
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className='col-sm-1'></div>
+      </div>
+
+
 
 
 
