@@ -9,6 +9,7 @@ import { Nav } from 'react-bootstrap';
 
 const Header = () => {
   return (
+    <header>
       <div className='container mb-5 header-container'>
         
         <div className='row'>
@@ -37,6 +38,7 @@ const Header = () => {
 
         </div>
       </div>
+    </header>
     
   )
 }
